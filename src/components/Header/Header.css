@@ -27,6 +27,7 @@
   .header__add-clothes-button {
     border: none;
     padding: 0;
+    cursor: pointer;
   }
   
   .header__menu_mobile-close {

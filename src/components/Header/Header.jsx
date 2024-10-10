@@ -2,17 +2,23 @@ import './Header.css'
 import logo from "../../assets/logo.svg";
 import avatar from "../../assets/avatar.svg";
 
-function Header() {
-    return (
-      <header className="header ">
-        <img className="header__logo" src={logo} alt="App logo" />
-        <p className="header__date-and-location">
-          June 15, New York
-        </p>
+function Header({addButtonClick, weatherData}) {
+  const currentDate = new Date().toLocaleString("default", {
+    month: "long",
+    day: "numeric",
+  });
+
+  return (
+    <header className="header ">
+      <img className="header__logo" src={logo} alt="App logo" />
+      <p className="header__date-and-location">
+        {currentDate}, {weatherData.city}
+      </p>
       <div
         className='header__menu'
       >
         <button
+          onClick={addButtonClick}
           type="button"
           className="header__add-clothes-button"
         >
