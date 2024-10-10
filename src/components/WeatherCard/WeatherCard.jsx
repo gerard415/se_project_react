@@ -1,9 +1,8 @@
-import './WeatherCard.css'
-import defaultWeather from '../../assets/day/default.svg'
-import { defaultWeatherOptions, weatherOptions } from '../../utlis/constants';
+import "./WeatherCard.css";
+import defaultWeather from "../../assets/day/default.svg";
+import { defaultWeatherOptions, weatherOptions } from "../../utils/constants";
 
-function WeatherCard({weatherData}) {
-
+function WeatherCard({ weatherData }) {
   const filteredOptions = weatherOptions.filter((option) => {
     return (
       option.day === weatherData.isDay &&
@@ -30,7 +29,7 @@ function WeatherCard({weatherData}) {
         className="weather-card__image"
       />
     </section>
-  )
+  );
 }
 
-export default WeatherCard
+export default WeatherCard;

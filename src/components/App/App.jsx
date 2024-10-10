@@ -1,12 +1,12 @@
-import './App.css'
-import Header from '../Header/Header'
-import Main from '../Main/Main'
-import { useEffect, useState } from 'react';
-import ModalWithForm from '../ModalWithForm/ModalWithForm';
-import ItemModal from '../ItemModal/ItemModal';
-import { getWeather, filterWeatherData } from '../../utlis/weatherApi';
-import { coordinates, APIkey } from '../../utlis/constants';
-import Footer from '../Footer/Footer';
+import "./App.css";
+import Header from "../Header/Header";
+import Main from "../Main/Main";
+import { useEffect, useState } from "react";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import ItemModal from "../ItemModal/ItemModal";
+import { getWeather, filterWeatherData } from "../../utils/weatherApi";
+import { coordinates, APIkey } from "../../utils/constants";
+import Footer from "../Footer/Footer";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -40,29 +40,20 @@ function App() {
   }, []);
 
   return (
-    <div className='page'>
-      <div className='page__content'>
-        <Header 
-          addButtonClick={addButtonClick}
-          weatherData={weatherData}
-        />
-        <Main 
-          weatherData = {weatherData} 
-          handleCardClick={handleCardClick}
-        />
-        <Footer/>
+    <div className="page">
+      <div className="page__content">
+        <Header addButtonClick={addButtonClick} weatherData={weatherData} />
+        <Main weatherData={weatherData} handleCardClick={handleCardClick} />
+        <Footer />
       </div>
-      <ModalWithForm
-        activeModal={activeModal}
-        onClose={closeModal}
-      />
+      <ModalWithForm activeModal={activeModal} onClose={closeModal} />
       <ItemModal
         activeModal={activeModal}
         card={selectedCard}
         onClose={closeModal}
       />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
