@@ -1,24 +1,23 @@
 .footer {
-    display: flex;
-    height: 112px;
-    justify-content: space-between;
-    align-items: end;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 0;
-    position: relative;
-    margin-top: auto;
-    box-sizing: border-box;
-  }
-  
-  .footer__copyright {
-    margin: 0;
-  }
-  
-  .footer__year {
-    margin: 0;
-  }
-  
-  @media screen and (max-width: 420px) {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
 
-  }
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0px 24px 0px;
+  margin: 0;
+}
+
+.footer__content-name {
+  list-style-type: none;
+  text-align: left;
+}
+
+.footer__content-year {
+  list-style-type: none;
+  text-align: right;
+}
