@@ -29,9 +29,10 @@
 
 .modal__close {
   color: black;
+  cursor: pointer;
 }
 
-.card-item__delete-btn {
+.modal__delete-btn {
   color: red;
   border: none;
   background: none;
@@ -43,4 +44,8 @@
   cursor: pointer;
   bottom: 70px;
   left: 380px;
+}
+
+.modal__delete-btn_hidden {
+  display: none;
 }
