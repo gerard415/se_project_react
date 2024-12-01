@@ -18,7 +18,9 @@
   margin-right: 24px;
 }
 
-.header__add-clothes-btn {
+.header__add-clothes-btn,
+.header__signup,
+.header__login {
   margin-left: auto;
   margin-right: 20px;
   font-weight: 700;
@@ -56,4 +58,11 @@
 .header__link {
   text-decoration: none;
   color: black;
+}
+
+.header__avatar {
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
 }
