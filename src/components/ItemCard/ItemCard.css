@@ -1,4 +1,4 @@
-.card {
+/* .card {
   position: relative;
   width: 323px;
   height: 326px;
@@ -25,4 +25,53 @@
   width: 100%;
   border: 1px solid #000;
   border-radius: 19px;
+} */
+
+.card {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 20px;
+  width: 325px;
+  height: 328px;
+  justify-content: center;
+}
+
+.card__name {
+  position: absolute;
+  margin: 0;
+  top: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 2px 12px;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: "Cabinet Grotsek", sans-serif;
+}
+
+.card__image {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  cursor: pointer;
+}
+.card__like-btn {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  margin: 0;
+  top: 24px;
+  right: 100px;
+  border: none;
+  padding: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url(../../assets/heartdefault.png);
+}
+
+.card__like-btn_liked {
+  background-image: url(../../assets/heartliked.png);
 }
