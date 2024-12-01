@@ -76,12 +76,12 @@ function App() {
           setClothingItems((cards) =>
             cards.map((item) => (item._id === _id ? updatedCard : item))
           );
-        })
+        }).catch(console.error)
       : removeCardLike(_id, token).then((updatedCard) => {
           setClothingItems((cards) =>
             cards.map((item) => (item._id === _id ? updatedCard : item))
           );
-        });
+        }).catch(console.error)
   };
   const handleCardDelete = () => {
     deleteItem(selectedCard._id)
@@ -101,7 +101,8 @@ function App() {
         setClothingItems((prev) => [data, ...prev]);
         closeActiveModal();
       })
-      .catch(console.error);
+      .catch(console.error)
+      .finally(setIsLoading(false))
   };
 
   const onRegister = ({ name, email, password, avatar }) => {
@@ -112,11 +113,11 @@ function App() {
         setCurrentUser(userProfile);
         signIn({ email, password });
         setIsLoggedIn(true);
-        setIsLoading(false);
         closeActiveModal();
         navigate("/profile");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.error(error))
+      .finally(setIsLoading(false))
   };
 
   const onLogin = ({ email, password }) => {
@@ -129,11 +130,11 @@ function App() {
         localStorage.setItem("jwt", res.token);
         setIsLoggedIn(true);
         setCurrentUser(res.user);
-        setIsLoading(false);
         closeActiveModal();
         navigate("/profile");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.error(error))
+      .finally(setIsLoading(false))
   };
 
   const onSignOut = () => {
@@ -148,10 +149,10 @@ function App() {
     editProfile({ name, avatar })
       .then((res) => {
         setCurrentUser(res);
-        setIsLoading(false);
         closeActiveModal();
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.error(error))
+      .finally(setIsLoading(false))
   };
 
   const handleToggleSwitchChange = () => {
