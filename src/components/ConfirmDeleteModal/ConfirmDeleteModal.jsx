@@ -4,11 +4,11 @@ import closeBtn from "../../assets/cls-btn.svg";
 function ConfirmDeleteModal({
   item,
   activeModal,
-  handleDeleteItem,
+  handleCardDelete,
   closeActiveModal,
 }) {
   const deleteCard = () => {
-    handleDeleteItem(item);
+    handleCardDelete(item);
   };
 
   return (
