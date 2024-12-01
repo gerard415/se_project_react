@@ -3,18 +3,32 @@ import SideBar from "../SideBar/SideBar";
 import Footer from "../Footer/Footer";
 import "./Profile.css";
 
-function Profile({ onCardClick, clothingItems, weatherData, handleAddClick }) {
+function Profile({ 
+  onCardClick, 
+  clothingItems, 
+  handleAddClick, 
+  onSignOut,
+  handleEditProfileClick,
+  isLiked,
+  onToggleLike,
+  isLoggedIn, }) {
   return (
     <div className="profile">
       <section className="profile__sidebar">
-        <SideBar />
+        <SideBar 
+          onSignOut={onSignOut}
+          onEditProfileData={handleEditProfileClick}
+          handleEditProfileClick={handleEditProfileClick}
+        />
       </section>
-      <section className="profile__clothing-items">
+      <section className="profile__clothes-section">
         <ClothesSection
           onCardClick={onCardClick}
           clothingItems={clothingItems}
-          weatherData={weatherData}
           handleAddClick={handleAddClick}
+          isLiked={isLiked}
+          onToggleLike={onToggleLike}
+          isLoggedIn={isLoggedIn}
         />
       </section>
     </div>
