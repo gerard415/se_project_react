@@ -1,5 +1,5 @@
 ## WTWR App
-This app is used to select proper attire based on the weather in a given area. It will give recommendations based on the temperatureand precipitation at the user's location. 
+This app is used to select proper attire based on the weather in a given area. It will give recommendations based on the temperature and precipitation at the user's location. 
 
 ### Languages Used:
 - React, HTMl and CSS for the frontend
