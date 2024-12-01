@@ -102,7 +102,7 @@ function App() {
         closeActiveModal();
       })
       .catch(console.error)
-      .finally(setIsLoading(false))
+      .finally(() => setIsLoading(false))
   };
 
   const onRegister = ({ name, email, password, avatar }) => {
@@ -117,7 +117,7 @@ function App() {
         navigate("/profile");
       })
       .catch((error) => console.error(error))
-      .finally(setIsLoading(false))
+      .finally(() => setIsLoading(false))
   };
 
   const onLogin = ({ email, password }) => {
@@ -134,7 +134,7 @@ function App() {
         navigate("/profile");
       })
       .catch((error) => console.error(error))
-      .finally(setIsLoading(false))
+      .finally(() => setIsLoading(false))
   };
 
   const onSignOut = () => {
@@ -152,7 +152,7 @@ function App() {
         closeActiveModal();
       })
       .catch((error) => console.error(error))
-      .finally(setIsLoading(false))
+      .finally(() => setIsLoading(false))
   };
 
   const handleToggleSwitchChange = () => {
