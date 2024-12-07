@@ -7,7 +7,10 @@ export function checkResponse(res) {
   return Promise.reject(`Error: ${res.status}`);
 }
 
-export const baseUrl = "http://localhost:3001";
+const baseUrl = process.env.NODE_ENV === "production" 
+  ? "https://api.cigwtwr.strangled.net"
+  : "http://localhost:3001";
+
 export const getItems = () => {
   return fetch(`${baseUrl}/items`).then(checkResponse);
 };
