@@ -7,7 +7,7 @@ export function checkResponse(res) {
   return Promise.reject(`Error: ${res.status}`);
 }
 
-const baseUrl = process.env.NODE_ENV === "production" 
+export const baseUrl = process.env.NODE_ENV === "production" 
   ? "https://api.cigwtwr.strangled.net"
   : "http://localhost:3001";
 
